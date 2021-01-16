@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    username: root
+    password: wanghan817
+    url: jdbc:mysql://121.36.0.145:3306/wefive_government?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai&autoReconnect=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      max-lifetime: 1800000 
+      maximum-pool-size: 20
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+server:
+  port: 8085
